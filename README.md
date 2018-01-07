@@ -257,3 +257,9 @@ Dans cette partie, nous allons installer un compte à rebours. Lorsque celui-ci 
 
 **8.3 Ajoutez une condition afin que le countDown n'apparaisse que lorsque la partie a commencée.**
 
+
+**8.4 Faites en sorte que la fonction `_onWordFail` soit appelée quand le `countDown`est terminé. La modale d'échec doit alors s'afficher !**
+
+
+![Congrats](https://media0.giphy.com/media/lD76yTC5zxZPG/giphy.gif)
+
