@@ -172,7 +172,7 @@ button : {
 }
 ```
 
-**5.2 Associez les fonctions undo et clear de `rn-draw` à leurs boutons respectifs.
+**5.2 Associez les fonctions undo et clear de `rn-draw` à leurs boutons respectifs.**
 
  🎉 Vous pouvez maintenant annuler votre dernier trait ou effacer le canvas !  
 ![Congrats](https://media0.giphy.com/media/e4TrOZ3otE7JK/giphy.gif)
@@ -191,4 +191,69 @@ Si les 60s sont écoulés, le dessinateur a perdu, et on passe au joueur suivant
 
 
 ### 6. La liste de mots
+
+Téléchargez le fichier words.js présent dans ce repo, (il contient une longue liste de mots pour le jeu) et placez ce fichier à la racine de votre dossier (au même niveau que `App.js`).
+
+**6.1 Importez la liste de mot dans le fichier `App.js` dans une variable `words`**
+
+**6.2 Dans le `constructor`, initialisez le state `words` qui a pour valeur la liste de mot mélangée aleatoirement.**
+
+**6.3 Dans le `constructor`, initialisez le state `currentWordIndex` à la valeur `0`. Cette variable correspond à l'index du mot en cours dans le tableau `this.state.words`**
+
+**6.4 Affichez le mot en cours dans la `View` `actionsContainer`**
+
+**6.5 Passer au mot suivant : créez un bouton mot trouvé (grâce à `TouchableOpacity`). Un tap sur ce bouton déclenche le passage au mot suivant**
+
+> ✋ Si vous êtes arrivés jusqu'ici, appelez moi pour que je vérifie votre exercice : si tout fonctionne vous devriez voir le mot changer à chaque tap.
+
+### 7. La logique du jeu
+Dans cette partie nous allons implémenter la logique générale du jeu. Il existe trois états distincts :
+
+- `wordFound` : le mot a été trouvé, on affiche un écran de félicitations, et un bouton pour passer au mot suivant.
+- `wordFail` : le mot n'a pas été trouvé, on affiche un message de défaite, et un bouton pour passer au mot suivant.
+- `gameStarted`: tant que la partie n'a pas commencée, on affiche le mot a dessiner pour le dessinateur.
+
+Le mot a dessiner ainsi que le message de succès (et de défaite) sont présentés dans une modal ([react-native-simple-modal](https://github.com/bodyflex/react-native-simple-modal)).
+
+**7.1 Initialisez 3 variables du state `wordFound`, `wordFail` et `gameStarted` avec pour valeur `false`.**
+
+**7.2 Installez et importez [`react-native-simple-modal`](https://github.com/bodyflex/react-native-simple-modal) dans le fichier `App.js`.**
+
+**7.3 Ajoutez la modal dans le render de `App` et ajoutez les bonnes conditions pour lesquelles la props `open` de la modal est à `true`.**
+
+**7.4 Dans la modale, si la partie n'a pas démarrée, affichez le mot à dessiner, ainsi qu'un bouton qui démarre la partie**
+
+**7.5 Dans la modale, si la partie a démarrée et que le mot a été trouvé, affichez un message de succès et un bouton pour passer au mot suivant**
+
+**7.6 Dans la modale, si la partie a démarrée et que le mot n'a pas été trouvé, affichez un message d'échec et un bouton pour passer au mot suivant.**
+
+**7.7 Dans le `View` `actionsContainer`, ajoutez un bouton "mot trouvé" qui finit la partie au tap.**
+
+> ✋ Si vous êtes arrivés jusqu'ici, appelez moi pour que je vérifie votre exercice : si tout fonctionne vous devriez voir le mot à dessiner dans une modal, puis le jeu. Au tap sur le bouton "mot trouvé", je vois un message de succès dans la modal accompagné d'un bouton "mot suivant". Au tap sur ce bouton, le processus décrit recommence.
+
+### 8. Le timer
+
+Dans cette partie, nous allons installer un compte à rebours. Lorsque celui-ci est fini la partie est terminée et le mot n'a pas été trouvé.
+
+**8.1 Installez et importez [`react-native-countdown-circle`](https://github.com/MrToph/react-native-countdown-circle) dans le fichier `App.js`**
+
+
+**8.2 Créez une fonction `this._onWordFail` dans le component `App`. Quand elle est appelée, cette fonction retourne `console.log('fail')`.**
+
+**8.2 Ajoutez le Countdown dans la `View` `DrawContainer` et positionnez le en absolute. Le code du countdown est le suivant :**
+
+```jsx
+<CountdownCircle
+    seconds={60}
+    radius={25}
+    borderWidth={4}
+    color="#F05E9F"
+    bgColor="#fff"
+    onTimeElapsed={this._onWordFail}
+    />
+```
+⚠️ Ne pas copier l'exemple sur le site de `react-native-countdown-circle`, uniquement le code ci-dessus !
+
+
+**8.3 Ajoutez une condition afin que le countDown n'apparaisse que lorsque la partie a commencée.**
 
