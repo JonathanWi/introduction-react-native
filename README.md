@@ -36,7 +36,7 @@ Nous découperons l'exercice en deux parties : une première partie qui consiste
 L'interface de dessin que nous allons créer comportera les fonctionnalités suivantes :
 
 - Une zone de dessin
-- Un color-picker de changer les couleurs du crayon
+- Un color-picker permettant de changer les couleurs du crayon
 - Une liste de boutons qui permet de changer la taille de la pointe du crayon
 - Un bouton pour annuler le dernier trait
 - Un bouton pour effacer le canvas
@@ -163,7 +163,7 @@ la valeur affichée de `strokeWidth` doit prendre la valeur du `TouchableOpacity
 ### 5. Annuler et effacer  
 Dans cette partie, nous allons créer deux boutons `annuler`(annule le dernier trait) et `effacer`(Efface l'integralité du canvas).
 
-**5.1 Dans la `View` `actionsContainer`, crèez deux `TouchableOpacity` "Undo" et "Delete"  dont le style est la suivant :**
+**5.1 Dans la `View` `actionsContainer`, crèez deux `TouchableOpacity` "Undo" et "Delete"  dont le style est le suivant :**
 
 ```
 button : {
@@ -196,7 +196,7 @@ Téléchargez le fichier words.js présent dans ce repo, (il contient une longue
 
 **6.1 Importez la liste de mot dans le fichier `App.js` dans une variable `words`**
 
-**6.2 Dans le `constructor`, initialisez le state `words` qui a pour valeur la liste de mot mélangée aleatoirement.**
+**6.2 Dans le `constructor`, initialisez le state `words` qui a pour valeur la variable `words` importée.**
 
 **6.3 Dans le `constructor`, initialisez le state `currentWordIndex` à la valeur `0`. Cette variable correspond à l'index du mot en cours dans le tableau `this.state.words`**
 
@@ -221,7 +221,7 @@ Le mot a dessiner ainsi que le message de succès (et de défaite) sont présent
 
 **7.3 Ajoutez la modal dans le render de `App` et ajoutez les bonnes conditions pour lesquelles la props `open` de la modal est à `true`.**
 
-**7.4 Dans la modale, si la partie n'a pas démarrée, affichez le mot à dessiner, ainsi qu'un bouton qui démarre la partie**
+**7.4 Dans la modale, si la partie n'a pas démarré, affichez le mot à dessiner, ainsi qu'un bouton qui démarre la partie**
 
 **7.5 Dans la modale, si la partie a démarrée et que le mot a été trouvé, affichez un message de succès et un bouton pour passer au mot suivant**
 
@@ -238,7 +238,7 @@ Dans cette partie, nous allons installer un compte à rebours. Lorsque celui-ci 
 **8.1 Installez et importez [`react-native-countdown-circle`](https://github.com/MrToph/react-native-countdown-circle) dans le fichier `App.js`**
 
 
-**8.2 Créez une fonction `this._onWordFail` dans le component `App`. Quand elle est appelée, cette fonction retourne `console.log('fail')`.**
+**8.2 Créez une fonction `this.onWordFail` dans le component `App`. Quand elle est appelée, cette fonction retourne `console.log('fail')`.**
 
 **8.2 Ajoutez le Countdown dans la `View` `DrawContainer` et positionnez le en absolute. Le code du countdown est le suivant :**
 
@@ -249,7 +249,7 @@ Dans cette partie, nous allons installer un compte à rebours. Lorsque celui-ci 
     borderWidth={4}
     color="#F05E9F"
     bgColor="#fff"
-    onTimeElapsed={this._onWordFail}
+    onTimeElapsed={this.onWordFail}
     />
 ```
 ⚠️ Ne pas copier l'exemple sur le site de `react-native-countdown-circle`, uniquement le code ci-dessus !
@@ -258,7 +258,7 @@ Dans cette partie, nous allons installer un compte à rebours. Lorsque celui-ci 
 **8.3 Ajoutez une condition afin que le countDown n'apparaisse que lorsque la partie a commencée.**
 
 
-**8.4 Faites en sorte que la fonction `_onWordFail` soit appelée quand le `countDown`est terminé. La modale d'échec doit alors s'afficher !**
+**8.4 Faites en sorte que la fonction `onWordFail` soit appelée quand le `countDown`est terminé. La modale d'échec doit alors s'afficher !**
 
 
 ![Congrats](https://media0.giphy.com/media/lD76yTC5zxZPG/giphy.gif)
