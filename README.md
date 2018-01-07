@@ -57,9 +57,9 @@ cd DrawParty
 npm start
 ```
 
-🎉 Vous venez de créer votre premier projet React Native !
+🎉 Vous venez de créer votre premier projet React Native !  
 
-![Congrats](https://media0.giphy.com/media/g9582DNuQppxC/giphy.gif)
+![Congrats](https://media0.giphy.com/media/XreQmk7ETCak0/giphy.gif)
 
 
 ### 2. La zone de dessin
@@ -128,7 +128,7 @@ Avant de commencer cette partie, veuillez lire la [documentation du state.](http
 
 > ✋ À cette étape, appelez-moi pour que je vienne vérifier votre code. Si tout s'est bien passé, vous pouvez maintenant changer la couleur du crayon.
 
-🎉 Vous êtes officielement le maître de la couleur
+🎉 Vous êtes officielement le maître de la couleur  
 ![Congrats](https://media1.giphy.com/media/z0zTHzcwM4VYQ/giphy.gif)
 
 ### 4. La taille de la mine
@@ -157,7 +157,7 @@ la valeur affichée de `strokeWidth` doit prendre la valeur du `TouchableOpacity
 
 **4.7 Modifiez le style des `touchableOpacity` afin que la stroke selectionnée apparaisse de couleur `#358EF6`**
 
- 🎉 Bravo, vous pouvez maintenant changer la taille du trait !
+ 🎉 Bravo, vous pouvez maintenant changer la taille du trait !  
 ![Congrats](https://media3.giphy.com/media/xT1XGD02MRIfS829qw/giphy.gif)
 
 ### 5. Annuler et effacer  
@@ -174,7 +174,7 @@ button : {
 
 **5.2 Associez les fonctions undo et clear de `rn-draw` à leurs boutons respectifs.
 
- 🎉 Vous pouvez maintenant annuler votre dernier trait ou effacer le canvas !
+ 🎉 Vous pouvez maintenant annuler votre dernier trait ou effacer le canvas !  
 ![Congrats](https://media0.giphy.com/media/e4TrOZ3otE7JK/giphy.gif)
 
 
