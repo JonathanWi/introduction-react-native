@@ -1,0 +1,109 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-countdown-circle",
+        "scope": null,
+        "escapedName": "react-native-countdown-circle",
+        "name": "react-native-countdown-circle",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/jonathanwidawski/Documents/DEV/LAB/AwesomeProject"
+    ]
+  ],
+  "_from": "react-native-countdown-circle@latest",
+  "_id": "react-native-countdown-circle@2.0.0",
+  "_inCache": true,
+  "_location": "/react-native-countdown-circle",
+  "_nodeVersion": "8.2.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-countdown-circle-2.0.0.tgz_1505419600389_0.5965812231879681"
+  },
+  "_npmUser": {
+    "name": "cmichel",
+    "email": "mail@cmichel.io"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-countdown-circle",
+    "scope": null,
+    "escapedName": "react-native-countdown-circle",
+    "name": "react-native-countdown-circle",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-countdown-circle/-/react-native-countdown-circle-2.0.0.tgz",
+  "_shasum": "273b73f7a274f11e92aa68f3f4e82133d6e98d1e",
+  "_shrinkwrap": null,
+  "_spec": "react-native-countdown-circle",
+  "_where": "/Users/jonathanwidawski/Documents/DEV/LAB/AwesomeProject",
+  "author": {
+    "name": "Christoph Michel"
+  },
+  "bugs": {
+    "url": "https://github.com/MrToph/react-native-countdown-circle/issues"
+  },
+  "dependencies": {},
+  "description": "A light-weight countdown circle indicator for React Native.",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "prop-types": "^15.5.10",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-iHtUqUsSer4/Qex5TOzYNDl9RyMDUAknZZWeqL80+OncvC35NU0O8oqMAtWobxkChu6yDOn4nVCz0G9i58WheA==",
+    "shasum": "273b73f7a274f11e92aa68f3f4e82133d6e98d1e",
+    "tarball": "https://registry.npmjs.org/react-native-countdown-circle/-/react-native-countdown-circle-2.0.0.tgz"
+  },
+  "gitHead": "c9365bd121f3d372859588a32fd2896377c27e20",
+  "homepage": "https://github.com/MrToph/react-native-countdown-circle#readme",
+  "keywords": [
+    "react",
+    "react native",
+    "percentage",
+    "circle",
+    "countdown",
+    "timer",
+    "indicator"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "maintainers": [
+    {
+      "name": "cmichel",
+      "email": "mail@cmichel.io"
+    }
+  ],
+  "name": "react-native-countdown-circle",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MrToph/react-native-countdown-circle.git"
+  },
+  "scripts": {},
+  "version": "2.0.0"
+}
