@@ -261,5 +261,75 @@ Dans cette partie, nous allons installer un compte à rebours. Lorsque celui-ci 
 **8.4 Faites en sorte que la fonction `onWordFail` soit appelée quand le `countDown`est terminé. La modale d'échec doit alors s'afficher !**
 
 
+## Partie 3 : Les joueurs
+Dans cette partie, l'objectif va être de pouvoir entrer le nombre de joueurs, leurs noms, leurs tours et finalement leurs points (et un classement).
+
+### 9. La navigation
+L'application va être découpée en deux écrans : un écran `Settings` qui sera la page d'entrée du jeu, sur laquelle nous pourrons changer le nombre de joueurs et entrer leurs noms. Une fois que tous les noms sont définis, un bouton apparait et nous permet d'accèder à la page `Game` (que nous avons créé dans les parties 1 & 2).
+
+**9.1 Copiez l'intégralité du code présent dans le fichier `App.js`, et copiez le dans un nouveau fichier `Game.js` situé au même niveau.**
+
+**9.2 Effacez le contenu du fichier `App.js`, et créez un nouveau `Component` qui affiche le texte : `DrawParty`**
+
+**9.3 Importez `StackNavigator` de `react-navigation` (vous n'avez pas besoin d'installer un nouveau module via NPM)**
+
+**9.4 À l'aide de la documentation de[`StackNavigator`](https://reactnavigation.org/docs/navigators/stack), créez une simple navigation de deux pages (`Settings` et `Game`) dans votre fichier `App.js`**
+
+> ✋ Si vous êtes arrivés jusqu'ici, appelez moi pour que je vérifie votre exercice.
+
+**9.5 Créez un bouton "Accéder au jeu" sur la page `Settings`. Au tap, il permet de naviguer jusqu'à la page `Game`**
+
+### 10. Le nombre de joueurs 
+
+**10.1 Dans le `Component` `Settings`, initialisez le state players à la valeur `['','']`.Cet array correspond à la liste des username des joueurs (ici 2 joueurs).**
+
+**10.2 Dans un `Text` affichez le nombre de joueurs présents dans la partie actuelle. (pas besoin de créer de nouvelle variable pour cette question).**
+
+**10.3 Créez deux boutons `+` et `-` autour du nombre de joueurs. Ils nous serviront à ajouter ou supprimer des joueurs.**
+
+**10.4 À l'aide de la fonction javascript `push` et d'une fonction `this.addPlayer`, faites qu'un tap sur le bouton `+` ajoute un joueur.**
+
+**10.5 À l'aide de la fonction javascript `splice` et d'une fonction `this.removePlayer`, faites qu'un tap sur le bouton `-` retire un joueur.**
+
+**10.6 À l'aide de la props `disabled` de `TouchableOpacity`, faites en sorte que le bouton `-` ne soit pas actif si le nombre de joueurs est inférieur ou égal à 2**
+
+> ✋ Si vous êtes arrivés jusqu'ici, appelez moi pour que je vérifie votre exercice. Si tout s'est bien passé, vous devriez pouvoir faire varier le nombre de joueurs !
+
+### 11. Les usernames
+
+**11.1 À l'aide de la fonction `map` de javascript, affichez un `TextInput` de React Native pour chaque joueurs**
+
+**11.2 En vous aidant de la documentation de [`TextInput`](https://facebook.github.io/react-native/docs/textinput.html) et d'une fonction `this.onChangeName`, faites en sorte que chaque TextInput corresponde au username des joueurs dans la partie**    
+
+**11.3 À l'aide de la fonction `includes` de javascript, faites en sorte que le bouton "Accéder au jeu" ne soit afficher qu'à la condition qu'aucun des usernames ne soit vide.**
+
+### 12. Passez les données des joueurs 
+
+**12.1 À l'aide de la documentation de[`StackNavigator`](https://reactnavigation.org/docs/navigators/stack), faites en sorte que la navigation jusqu'à la page `Game` contienne les informations sur les players.**
+
+**12.2 Dans le `constructor` du component `Game`, faites un `console.log` de `this.props` afin de localiser la variable `players`**
+
+**12.3 Dans le component `Game`, initialisez le `state` `players` qui a pour valeur les players récupérés depuis `this.props`**
+
+### 13. Le tour des joueurs 
+
+Pour cette question, du fait de sa similarité avec la **partie 7**, vous ne serez pas guidé :
+
+**13.1 Initialisez deux variables `currentPlayerIndex` à `0` et `displayWord` à `false`. voici la séquence de modal que doivent voir les joueurs :**
+
+![pattern](https://i.imgur.com/kWEAx3W.png)
+
+⚠️ Lorsque tous les joueurs ont joués, le jeu doit revenir au premier joueur !
+
+
+### 14. Les scores (bonus)
+
+À l'aide de tout ce que nous avons vu précédemment, mettez en place un système de points pour les joueurs : 
+
+- Au tap sur le bouton "mot trouvé", la modal contient la liste des joueurs. Je peux selectionner un joueur (celui qui a trouvé le mot) et valider afin que lui et le dessinateur reçoivent 1 point.
+
+- Après avoir validé, je vois un classement des joueurs ordonné du meilleur (le plus de points) au moins bon (le moins de points).
+
+
 ![Congrats](https://media0.giphy.com/media/lD76yTC5zxZPG/giphy.gif)
 
